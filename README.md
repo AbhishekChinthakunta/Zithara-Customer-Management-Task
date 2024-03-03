@@ -1,10 +1,68 @@
-# Zithara Technologies : Zithara Round 2 task || Customer Management list task using PERN stack || Zithara Technologies
-Details of the task are as follows:
-1. Create 50 records in database with the following column fields “sno, customer name, age, phone, location, created_at” and dummy data
-2. Create a single page application to display the above data in table format with search option, and pagination with 20 records per page.
-3. The created_at column data has to be displayed in two separate columns as “date” and “time”
-4. The search functionality will search the data by the column "name" or "location".
-5. There should be an option to sort the data either by "date" or by "time".
+# Zithara-Customer-Management-Task
+Customer Management Data list using PERN stack, Zithara Technologies Round 2 - Task: React and Node JS Application Development. This is a simple customer management app built with React, Node.js, Express and PostgreSQL.
+
+# Features
+1)Displays customer data in a paginated table
+2)Search customers by name and location
+3)Sort customers by created date and time
+4)React frontend with Node/Express backend
+5)PostgreSQL database with dummy seeded data
 
 
-To see the output , you can open this link --- https://youtu.be/SabTnZpZUcM
+# Usage
+Env Variables
+Create a .env file in then root and add the following
+
+DB_HOST = localhost
+DB_PORT = 5432
+DB_USER = postgres
+DB_PASS = Abhi123
+DB_NAME = zithara
+
+
+# Installing required Dependencies and running the dev server
+npm install,
+cd record-app,
+node server.js,
+npm install
+
+# Database Schema
+A PostgreSQL database named customerdb is used with the following schema:
+# Column and its Datatype
+sno 	              INTEGER,
+name	              VARCHAR(15),
+age          	      INTEGER,
+phone	              INTEGER,
+location	          VARCHAR(50),
+created_at	        TIMESTAMP,
+created_at_time     TIMESTAMP
+
+
+
+API Reference
+Get all customers (paginated) ,
+GET/api/customers
+
+Page, 
+Sortby
+
+Search customers ,
+GET/api/search  ,
+Search
+
+# Frontend
+The frontend directory has the React frontend code. It uses React hooks for state management and Axios to call APIs.
+Some Key Files:-
+App.js,
+App.text.js ,
+index.css ,
+index.js,
+reportWebVitals.js ,
+setupTests.js
+
+# Backend
+Some key files:-
+db.js,
+server.js ,
+package-lock.json ,
+package.json
